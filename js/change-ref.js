@@ -12,3 +12,5 @@ const persion1 = {
 fullName(); // undefined undefined
 fullName.call(persion1); // James January
 fullName2.call(persion1, 'Oslo', 'Norway'); // James January Oslo Norway
+
+fullName2.apply(persion1, ['Oslo', 'Norway']);
