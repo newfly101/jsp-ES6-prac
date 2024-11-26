@@ -1,16 +1,11 @@
-// console.log("hello");
+window.onload = function () {
+    let text = document.getElementById("text");
+    // console.log(text);
 
-// 호이스팅
-console.log(greeting);
-
-var greeting = "hello";
-
-// console.log(gretting_let);
-//
-// let gretting_let = "hello";
-
-func();
-
-function func() {
-    console.log(1);
+    text.innerText = "HTML 문서 loaded";
 }
+
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+    alert('button clicked');
+});
