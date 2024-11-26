@@ -16,3 +16,9 @@ form.onclick = function (event) {
         }, 1000);
     }
 };
+
+// event capturing
+for(let element of document.querySelectorAll('*')) {
+    element.addEventListener("click", e => console.log(`캡처링 : ${element.tagName}`), {capture: true});
+    element.addEventListener("click", e => console.log(`버블링 : ${element.tagName}`));
+}
