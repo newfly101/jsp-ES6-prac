@@ -14,3 +14,20 @@ fullName.call(persion1); // James January
 fullName2.call(persion1, 'Oslo', 'Norway'); // James January Oslo Norway
 
 fullName2.apply(persion1, ['Oslo', 'Norway']);
+
+//bind()
+function func(lang) {
+    if (lang === "kor"){
+        console.log(`language : ${this.korGreeting}`);
+    } else {
+        console.log(`language : ${this.engGreeting}`);
+    }
+}
+
+const greeting = {
+    korGreeting: '해윙',
+    engGreeting: 'hello',
+};
+
+const boundFunc = func.bind(greeting);
+boundFunc('kor');
