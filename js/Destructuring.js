@@ -19,3 +19,7 @@ let result = arr.reduce( (acc, cur, idx, arr) => {
     return acc + cur;
 })
 console.log(`합산 : ${result}`);
+
+// 깊은 복사
+const arr2 = structuredClone(arr);
+console.log(arr, arr2);
